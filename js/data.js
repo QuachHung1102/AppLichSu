@@ -1,3 +1,5 @@
+'use strict';
+
 export const data1 = [
   {
     id: 1,

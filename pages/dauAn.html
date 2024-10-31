@@ -12,6 +12,7 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- main css -->
+  <link rel="stylesheet" href="../css/to-top.css">
   <link rel="stylesheet" href="../css/dauAn.css">
   <title>Lịch sử</title>
   <style>
@@ -43,22 +44,23 @@
   <!-- Header-->
   <header>
     <div class="logo">
-      <img src="../images/logo.png" alt="logo">
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="logo">
+      </a>
     </div>
     <nav>
       <ul class="list-links">
         <li class="active"><a href="#">Dấu ấn</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Danh mục
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item text-dark" href="#">Dòng chảy đất Việt</a></li>
+            <li><a class="dropdown-item text-dark" href="#">Dấu ấn</a></li>
+            <li><a class="dropdown-item text-dark" href="#">Tinh hoa tiên rồng</a></li>
+            <li><a class="dropdown-item text-dark" href="#">Dấu tích ngàn đời</a></li>
+            <li><a class="dropdown-item text-dark" href="#">Hành trang</a></li>
           </ul>
         </li>
       </ul>
@@ -152,7 +154,7 @@
       </div>
     </div>
   </section>
-  <section class="container pb-2">
+  <section class="container pb-4">
     <div class="timeLine_textC">
       <h3>Hồng Bàng & Văn Lang</h3>
       <p>Theo hai bộ sử ký Đại Việt sử ký toàn thư (viết ở thế kỷ 15) và Đại Việt sử lược (viết ở thế kỷ 13), thì nhà
@@ -170,7 +172,7 @@
   <!-- content -->
   <section class="container-fluid">
     <div class="content">
-      <div class="item1 px-5 pt-3">
+      <div class="item1 ms-5 px-5 pt-3 pb-5">
         <div class="d-flex justify-content-between">
           <div class="d-flex column-gap-4 align-items-center">
             <p class="text-uppercase fw-bold text-dark m-0">Sắp xếp</p>
@@ -201,17 +203,18 @@
             </div>
           </div>
         </div>
-        <div class="list-thoiKy mt-5">
-          <div class="thoiKy d-flex column-gap-3">
+        <div class="list-thoiKy mt-5 d-flex flex-column row-gap-5">
+          <!-- <div class="thoiKy d-flex column-gap-3">
             <div class="thoiKy-img">
               <img src="../images/1.png" alt="Ảnh">
             </div>
-            <div class="thoiKy-content py-2">
-              <div class="d-flex justify-content-between">
+            <div class="thoiKy-content d-flex flex-column justify-content-center py-2">
+              <div class="d-flex justify-content-between align-items-center">
                 <h4>Thời kỳ Hồng Bàng & Văn Lang</h4>
-                <p class="fw-bold text-black">? - 258 TCN</p>
+                <p class="fw-bold text-black m-0">? - 258 TCN</p>
               </div>
-              <p class="thoiKy-content-text text-black limited-lines">Theo hai bộ sử ký Đại Việt sử ký toàn thư
+              <p class="thoiKy-content-text text-black limited-lines m-0">Theo hai bộ sử ký Đại
+                Việt sử ký toàn thư
                 (viết ở
                 thế kỷ 15) và Đại Việt sử lược (viết ở thế kỷ 13),
                 thì nhà nước Âu Lạc được Thục Phán (thủ lĩnh bộ tộc Âu Việt) thành lập vào năm 258 TCN sau khi đánh bại
@@ -225,7 +228,26 @@
                 Giang (Quảng Tây) đến phía nam là dãy núi Hoành Sơn ở Hà Tĩnh hiện nay.
               </p>
             </div>
-          </div>
+          </div> -->
+        </div>
+        <div class="d-flex justify-content-center align-items-center py-5">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center" id="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" id="first-page">Về đầu</a>
+              </li>
+              <li class="page-item disabled">
+                <a class="page-link" href="#" id="prev-page" tabindex="-1" aria-disabled="true">Trước</a>
+              </li>
+              <!-- Các nút trang sẽ được thêm vào đây bằng JavaScript -->
+              <li class="page-item">
+                <a class="page-link" href="#" id="next-page">Sau</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" id="last-page">Về cuối</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
       <div class="item2">
@@ -235,10 +257,56 @@
         <div id="menu2" class="items-btn2">
         </div>
       </div>
-
     </div>
   </section>
+  <footer class="container-fluid pt-5 pb-3">
+    <div class="footer-content">
+      <div class="d-grid mt-5 mx-5">
+        <div class="row">
+          <div class="col-7">
+            <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+              <div>
+                <img src="../images/footer.png" alt="">
+                <p class="pt-3 text-secondary lh-1">Nguồn: Vietnam Institute of History, World History Encyclopedia</p>
+              </div>
+              <div class="d-flex flex-wrap column-gap-2 footer-link">
+                <p><a href="#">Trang chủ</a></p><span>/</span>
+                <p><a href="#">Dòng chảy đất Việt</a></p><span>/</span>
+                <p><a href="#">Dấu ấn</a></p><span>/</span>
+                <p><a href="#">Tinh hoa Tiên Rồng</a></p><span>/</span>
+                <p><a href="#">Dấu tích ngàn đời</a></p><span>/</span>
+                <p><a href="#">Hành trang</a></p><span>/</span>
+                <p><a href="#">Về trang Web</a></p><span>/</span>
+                <p><a href="#">Liên lạc</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-5">
+            <div>
+              <p class="footer-title">email</p>
+              <p class="footer-info">phatnghiemthe07@gmail.com </p>
+            </div>
+            <div>
+              <p class="footer-title">telephone</p>
+              <p class="footer-info">0936035263</p>
+            </div>
+            <div class="d-flex align-items-end justify-content-between">
+              <div>
+                <p class="footer-title">địa chỉ</p>
+                <p class="footer-info">HA NOI, VIET NAM</p>
+              </div>
+              <p class="copyrightText m-0">&copy; 2024 — Copyright</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <!-- jquery  -->
+  <script src="./js/jquery-3.6.0.js"></script>
+  <!-- jquery waypoin -->
+  <script src="./js/jquery.waypoints.min.js"></script>
   <!-- bs -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -246,6 +314,25 @@
   <!-- main js -->
   <script type="module" src="../js/timeLine.js"></script>
   <script type="module" src="../js/menu.js"></script>
+  <script type="module" src="../js/pagination.js"></script>
+  <script type="module" src="../js/move-top.js"></script>
+  <script type="module" src="../js/easing.js"></script>
+  <!-- for-bottom-to-top smooth scrolling -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+        };
+      */
+      $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+  </script>
+  <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+  <!-- //for-bottom-to-top smooth scrolling -->
 </body>
 
 </html>
