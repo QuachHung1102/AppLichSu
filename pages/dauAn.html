@@ -170,19 +170,69 @@
   <!-- content -->
   <section class="container-fluid">
     <div class="content">
-      <div class="item1"></div>
+      <div class="item1 px-5 pt-3">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex column-gap-4 align-items-center">
+            <p class="text-uppercase fw-bold text-dark m-0">Sắp xếp</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Thời kỳ
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex column-gap-4 align-items-center">
+            <p class="text-capitalize  m-0">Bộ lọc:</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Không có
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Action</button>
+                <button class="dropdown-item" type="button">Another action</button>
+                <button class="dropdown-item" type="button">Something else here</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-thoiKy mt-5">
+          <div class="thoiKy d-flex column-gap-3">
+            <div class="thoiKy-img">
+              <img src="../images/1.png" alt="Ảnh">
+            </div>
+            <div class="thoiKy-content py-2">
+              <div class="d-flex justify-content-between">
+                <h4>Thời kỳ Hồng Bàng & Văn Lang</h4>
+                <p class="fw-bold text-black">? - 258 TCN</p>
+              </div>
+              <p class="thoiKy-content-text text-black limited-lines">Theo hai bộ sử ký Đại Việt sử ký toàn thư
+                (viết ở
+                thế kỷ 15) và Đại Việt sử lược (viết ở thế kỷ 13),
+                thì nhà nước Âu Lạc được Thục Phán (thủ lĩnh bộ tộc Âu Việt) thành lập vào năm 258 TCN sau khi đánh bại
+                vị vua Hùng cuối cùng của nước Văn Lang, ông lên ngôi và lấy niên hiệu là An Dương Vương.
+                An Dương Vương sát nhập lãnh thổ của Văn Lang và lãnh thổ của bộ tộc mình (Âu Việt) và hình thành nên
+                một
+                nhà nước mới là Âu Lạc (kết hợp giữa người Âu Việt và người Lạc Việt)
+                <br>
+                Lãnh thổ Âu Lạc gồm lãnh cũ của bộ tộc Âu Việt ở phía bắc, mà ngày nay là một phần phía nam tỉnh Quảng
+                Tây (Trung Quốc) và lãnh thổ của Văn Lang ở miền bắc Việt Nam. Âu Lạc có ranh giới phía bắc là sông Tả
+                Giang (Quảng Tây) đến phía nam là dãy núi Hoành Sơn ở Hà Tĩnh hiện nay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="item2">
-        <div class="itemTitle" style="background-color: aquamarine;">itemTitle 1</div>
-        <div class="items-btn1">
-          <div class="itemTitle">itemTitle 2</div>
-          <div class="itemTitle">itemTitle 3</div>
-          <div class="itemTitle">itemTitle 4</div>
-          <div class="itemTitle">itemTitle 5</div>
-          <div class="itemTitle">itemTitle 6</div>
-          <div class="itemTitle">itemTitle 7</div>
-          <div class="itemTitle">itemTitle 8</div>
-          <div class="itemTitle">itemTitle 9</div>
-          <div class="itemTitle">itemTitle 10</div>
+        <div class="itemTitle">Dấu ấn</div>
+        <div id="menu1" class="items-btn1"></div>
+        <div class="itemTitle">Tinh hoa tiên rồng</div>
+        <div id="menu2" class="items-btn2">
         </div>
       </div>
 
@@ -194,7 +244,8 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <!-- main js -->
-  <script src="../js/timeLine.js"></script>
+  <script type="module" src="../js/timeLine.js"></script>
+  <script type="module" src="../js/menu.js"></script>
 </body>
 
 </html>

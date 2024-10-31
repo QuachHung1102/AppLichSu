@@ -8,6 +8,7 @@
   padding: 0px;
   box-sizing: border-box;
   scrollbar-width: none;
+  user-select: none;
 }
 
 html,
@@ -16,8 +17,8 @@ body {
 }
 
 body {
-  font-family: 'TrixiProRegular', sans-serif !important;
-  background-image: url('../images/home-backGround.png');
+  font-family: "TrixiProRegular", sans-serif !important;
+  background-image: url("../images/home-backGround.png");
   background-color: black;
   background-size: cover;
   background-attachment: fixed;
@@ -60,7 +61,6 @@ body {
   background-position: center;
 }
 
-
 /* Header */
 header {
   width: var(--width);
@@ -71,7 +71,7 @@ header {
   position: relative;
   padding-inline: 20px;
   padding-block: 3vh;
-  font-family: '1FTV-HF-Gesco';
+  font-family: "1FTV-HF-Gesco";
 }
 
 nav {
@@ -97,7 +97,7 @@ header nav ul {
 
   li {
     a {
-      transition: all .5s;
+      transition: all 0.5s;
       color: inherit;
       text-decoration: none;
       font-size: 1rem;
@@ -138,7 +138,7 @@ header nav ul li.active {
 
   .timeLine {
     height: 0;
-    width: 150%;
+    width: 200%;
     border-top: 1px dotted #fff;
     display: flex;
     justify-content: space-around;
@@ -159,26 +159,25 @@ header nav ul li.active {
         width: 15vh;
         text-wrap: wrap;
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 500;
         transition: all 0.5s;
         color: #fff;
+        font-family: "UTM Avo";
       }
 
       .timeLine-item-content:hover {
-        color: #D34936;
-        font-size: 0.9rem;
+        color: #d34936;
+        font-size: 1.1rem;
       }
-
-
     }
 
     .timeLine-item.active {
-      background-color: #D34936;
+      background-color: #d34936;
 
       .timeLine-item-content {
-        color: #D34936;
-        font-size: 0.9rem;
+        color: #d34936;
+        font-size: 1.1rem;
       }
     }
   }
@@ -186,14 +185,14 @@ header nav ul li.active {
 
 .timeLine_textC {
   h3 {
-    color: #D34936;
+    color: #d34936;
   }
 
   p {
     color: #fff;
     font-size: 0.9rem;
     text-overflow: ellipsis;
-    font-family: 'UTM-Avo';
+    font-family: "UTM-Avo";
   }
 }
 
@@ -207,25 +206,64 @@ header nav ul li.active {
 
   .item1 {
     grid-column: 1/2;
-    background-color: aqua;
+    background-color: #ffffff;
+    font-family: "UTM-Avo";
+    z-index: 1;
+
+    .thoiKy-img {
+      img {
+        width: 10vw;
+        height: 10vw;
+        object-fit: cover;
+      }
+    }
+    .thoiKy-content {
+      h4 {
+        color: #d34936;
+        font-family: "1FTV HF Gesco";
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+      .thoiKy-content-text {
+        font-size: 0.9rem;
+        font-family: "UTM-Avo";
+      }
+      .limited-lines {
+        display: -webkit-box; /* Sử dụng flexbox để tạo hộp */
+        -webkit-box-orient: vertical; /* Đặt hướng của hộp là dọc */
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        overflow: hidden; /* Ẩn phần nội dung tràn */
+        text-overflow: ellipsis; /* Thêm dấu "..." vào cuối văn bản bị cắt */
+      }
+    }
   }
 
   .item2 {
     grid-column: 2/3;
+    z-index: 1;
 
     .itemTitle {
       background-color: rgba(0, 0, 0, 0.5);
       flex-shrink: 0;
-
       display: flex;
       align-items: center;
       justify-content: center;
       padding-inline: 2vw;
       padding-block: 3vh;
+      font-size: 1.3rem;
+      text-transform: capitalize;
     }
-  }
-
-  .item2 > .itemTitle {
-    
+    > .itemTitle {
+      background-color: #ffffff;
+      text-transform: uppercase;
+    }
+    .menuItem {
+      transition: all 0.6s;
+    }
+    .menuItem:hover {
+      background-color: #d34936;
+      color: #fff;
+    }
   }
 }
