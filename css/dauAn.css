@@ -224,4 +224,8 @@ header nav ul li.active {
       padding-block: 3vh;
     }
   }
+
+  .item2 > .itemTitle {
+    
+  }
 }
