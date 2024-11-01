@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const thoikyToShow = data1.slice(start, end);
 
     thoikyToShow.forEach((item) => {
+      const encodedTitle = encodeURIComponent(item.title);
       const thoikyItem = `
       <div class="thoiKy d-flex column-gap-3">
         <div class="thoiKy-img">
@@ -27,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="thoiKy-content d-flex flex-column justify-content-center py-2">
           <div class="d-flex justify-content-between align-items-center">
-            <h4>${item.title}</h4>
+            <h4>
+              <a href="./dauAn2.html?title=${encodedTitle}">${item.title}</a>
+            </h4>
             <p class="fw-bold text-black m-0">${item.time}</p>
           </div>
           <p class="thoiKy-content-text text-black limited-lines m-0">${item.desc}</p>

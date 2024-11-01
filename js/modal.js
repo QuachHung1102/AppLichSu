@@ -1,13 +1,13 @@
 "use strict";
 
-import { data1 } from "./data.js";
+import { dataForHome } from "./data.js";
 
 // render modal
 
 function renderToDo() {
   let content = "";
   //Duyệt mảng từ phải qua trái (bắt đầu ở phần tử cuối mảng)
-  content = data1.reduceRight((tdContent, item, index) => {
+  content = dataForHome.reduceRight((tdContent, item, index) => {
     //tdContent = tdContent(noi dung cũ) + `nội dung mới`;
     tdContent += `
           <div id="modal${index}" class="customModal hidden">

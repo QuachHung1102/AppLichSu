@@ -4,11 +4,12 @@
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
   user-select: none;
+  text-decoration: none !important;
 }
 
 html,
@@ -47,7 +48,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-
 }
 
 .vongNgoaiCung {
@@ -227,10 +227,12 @@ header nav ul li.active {
 
     .thoiKy-content {
       h4 {
-        color: #d34936;
-        font-family: "1FTV HF Gesco";
-        font-size: 1.5vw;
-        font-weight: 400;
+        a {
+          color: #d34936;
+          font-family: "1FTV HF Gesco";
+          font-size: 1.5vw;
+          font-weight: 400;
+        }
       }
 
       p {
@@ -271,7 +273,7 @@ header nav ul li.active {
       font-family: "UTM-Avo";
     }
 
-    >.itemTitle {
+    > .itemTitle {
       background-color: #ffffff;
       text-transform: uppercase;
     }
@@ -290,8 +292,8 @@ header nav ul li.active {
 
 /* footer */
 footer {
-  font-family: 'UTM-Avo';
-  color: #D4D5D9;
+  font-family: "UTM-Avo";
+  color: #d4d5d9;
 
   img {
     width: 17vw;
@@ -307,7 +309,7 @@ footer {
 
       a {
         text-decoration: none;
-        color: #D4D5D9;
+        color: #d4d5d9;
       }
     }
 
@@ -315,7 +317,7 @@ footer {
       font-size: 0.75vw;
       font-weight: normal;
       text-transform: uppercase;
-      color: #898A8D;
+      color: #898a8d;
     }
 
     .footer-info {
@@ -332,9 +334,20 @@ footer {
     width: 60%;
 
     p {
-      font-size: 1.6vw;
-      font-family: "UTM-Avo";
-      color: #fff;
+      font-size: 1.2vw;
+      font-family: "1FTV-HF-Gesco";
+      color: #4d4d4d;
+      transition: all 0.5s;
+      text-align: center;
+    }
+
+    .center-content-text {
+      p {
+        font-size: 1.6vw;
+        font-family: "1FTV-HF-Gesco";
+        color: #fff;
+        font-weight: '400';
+      }
     }
   }
 
@@ -345,7 +358,7 @@ footer {
     p {
       font-size: 1.2vw;
       font-family: "1FTV-HF-Gesco";
-      color: #4D4D4D;
+      color: #4d4d4d;
       transition: all 0.5s;
     }
 
@@ -365,53 +378,52 @@ footer {
   ul {
     list-style-type: none;
     padding: 0;
+    p {
+      color: #858585;
+      font-size: 1.1vw;
+      font-family: "UTM-Avo";
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.5s;
+    }
 
     li {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      column-gap: 1.5vw;
+      align-items: start;
+      column-gap: 2.5vw;
       padding-block: 1.2vh;
       padding-inline: 2vw;
       transition: all 0.5s;
 
       p {
-        font-size: 1.2vw;
+        font-size: 1.1vw;
       }
-
+      span {
+        font-size: 0.8vw;
+      }
     }
 
     li:hover {
-      background-color: #d34936;
       color: #fff;
-
-      a {
+      p {
         color: #fff;
+        font-size: 1.15vw;
       }
     }
 
     li.active {
-      background-color: #d34936;
       color: #fff;
 
-      a {
+      p {
         color: #fff;
+        font-size: 1.15vw;
       }
     }
-  }
-
-  a {
-    color: #858585;
-    text-decoration: none;
-    font-size: 1.2vw;
-    font-family: "UTM-Avo";
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 5;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: all 0.5s;
   }
 }
 
@@ -420,14 +432,34 @@ footer {
   font-size: 1.5vw;
   background-color: #fff;
   text-align: start;
-  font-family: 'TrixiProRegular';
+  font-family: "TrixiProRegular";
+  padding-block: 1vh;
+  padding-left: 2vw;
 }
 
 .text-content-right {
-  font-family: 'UTM-Avo';
+  font-family: "UTM-Avo";
   font-size: 0.9vw;
-  max-height: 70vh;
+  max-height: 77vh;
   overflow: scroll;
+  img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 2vh;
+  }
+  a.btn-chiTiet {
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-family: "TrixiProRegular";
+    font-weight: 600;
+    color: #fff;
+    background-color: black;
+    padding-inline: 1vw;
+    padding-block: 1vh;
+    text-decoration: none;
+  }
 }
 
 /* backToTop */
@@ -438,5 +470,5 @@ footer {
 }
 
 .cd-top--fade-out {
-  opacity: .5;
+  opacity: 0.5;
 }
